@@ -1,4 +1,4 @@
-//script จะทำงานโดยดึงข้อมูลจากส่วนบน tag script ใน file html มา
+//script จะทำงานโดยดึงข้อมูลจากส่วนบน tag script ใน file html มา (เชื่อมต่อ github)
 
 //แสดงใน console
 console.log("Hello Jame")
