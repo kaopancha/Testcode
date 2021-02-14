@@ -1,28 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vue.JS</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     </head>
-
     <body>
-        <h1>This is javascript </h1>
-        
-        <button onclick="lotto()">สุ่มลอตเตอรี่</button>
-        <br><br>
-        <button onclick="random_num()">สุ่มเลขจนกว่าจะตรง</button>
-        <br><br>
-        <button onclick="cal_pro()">คำนวณราคา</button>
-        <br><br>
-        <button onclick="headtail()">ทายหัวก้อย</button>
-        <br><br>
-        <button onclick="tocelsius()">แปลงอุณภูมิ</button>
-        <br><br>
-        <button onclick="primeNum_func()">หาจำนวนเฉพาะ</button>
-        <p id="result"></p>
-        <br>
-        <a href="page1.html"><button>next page</button></a>
+        <div id="vue-app">
+            <!-- Data / Method -->
+            <h1>gName : {{getName()}}</h1>
+            <h1>sName : {{setName('Heartrocker')}}</h1>
+            <h1>age : {{age}}</h1>
+            <!-- Data Binding -->
+            <h1>Website : <a v-bind:href="website">Click</a></h1>
+            <input type="text" v-bind:value="name"><br><br>
+            <!-- Input Event -->
+            <input type="text" v-on:keyup="addCount()" placeholder="Key">
+            <input type="text" v-on:keyup.Enter="addCount()" placeholder="Enter">              
+            <h1>Count : {{count}}</h1>
+            <!-- Event -->
+            <button type="button" v-on:click="addAge()">Add</button>
+            <button type="button" v-on:click="subtractAge()">Subtract</button>
+        </div><br>
 
-        <script src="app.js"></script>
-        <script src="primenum.js"></script>
+        <a href="app.html"><button>next page</button></a>
+        <script src="vueapp.js" charset="utf-8"></script>
     </body>
+    
 </html>
